@@ -1,0 +1,16 @@
+JPanel(name=joinGamePanel, background=white):
+      content:
+          - JLabel(name=ipAddressLabel, text=label.ipAddress)
+          - JTextField(name=ipAddressTextField, columns=15)
+          - JButton(name=backButton, text=button.back, onAction=[backButton])
+          - JButton(name=connectButton, text=button.connect, onAction=[$validate, connectButton])
+          - JLabel(name=statusMessageLabel, text=label.statusMessage)
+          - MigLayout:
+                constraints:
+                     - ipAddressLabel: span 2, wrap
+                     - ipAddressTextField: span 2, grow, wrap
+                     - backButton
+                     - connectButton: grow, wrap
+                     - statusMessageLabel: span 2
+validate:
+    - ipAddressTextField.text: {label: label.ipAddressError, mandatory: true}

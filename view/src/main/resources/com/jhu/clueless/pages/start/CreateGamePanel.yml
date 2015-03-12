@@ -1,0 +1,17 @@
+JPanel(name=createGamePanel, background=white):
+    - JButton(name=startGameButton, text=button.startGame, onAction=[startGame])
+    - JButton(name=backButton, text=button.back, onAction=[backButton])
+    - JLabel(name=playerOne, text=label.slot)
+    - JLabel(name=playerTwo, text=label.slot)
+    - JLabel(name=playerThree, text=label.slot)
+    - JLabel(name=playerFour, text=label.slot)
+    - JLabel(name=playerFive, text=label.slot)
+    - JLabel(name=playerSix, text=label.slot)
+    - JComboBox(name=chooseCharacterComboBox)
+    - MigLayout: |
+        [[]]
+        []
+        playerOne
+        >backButton  <startGameButton <chooseCharacterComboBox
+        {playerOne: span 2, playerTwo: span 2, playerThree: span 2, playerFour: span 2, playerFive: span 2, playerSix: span 2, startGameButton: span 2}
+    

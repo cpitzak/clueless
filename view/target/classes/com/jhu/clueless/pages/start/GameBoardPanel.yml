@@ -1,0 +1,13 @@
+JPanel(name=gameBoardPanel, background=white):
+    - JButton(name=backButton, text=button.back, onAction=[backButton])
+    - JLayeredPane(name=gameBoardLayeredPane)
+    - NotepadLayeredPane(name=notepadLayeredPane)
+    - GameInfo(name=gameInfo)
+    - JPanel(name=cardHolder, background=white)
+    - MigLayout: |
+        [[]]
+        []                      []
+        gameBoardLayeredPane    notepadLayeredPane
+        gameInfo
+        cardHolder
+        {notepadLayeredPane: spany 3}

@@ -1,0 +1,20 @@
+JPanel(name=mainPanelButtonPanel, background=white):
+    - JButton(name=joinGameButton, text=button.joinGame, onAction=[$validate, joinGameButton])
+    - JButton(name=createGameButton, text=button.createGame, onAction=[$validate, createGameButton])
+    - JButton(name=settingsButton, text=button.settings, onAction=[$validate, settingsButton])
+    - JLabel(name=userNameLabel, text=label.userName)
+    - JTextField(name=userNameTextField)
+    - JLabel(name=blank)
+    - MigLayout: |
+        [[center, wrap]]
+        []
+        blank
+        userNameLabel
+        userNameTextField
+        joinGameButton
+        createGameButton
+        settingsButton
+        {blank: newline 100px, joinGameButton: grow, createGameButton: grow, settingsButton: grow}
+
+validate:
+    - userNameTextField.text: {mandatory: true, label: label.userName}

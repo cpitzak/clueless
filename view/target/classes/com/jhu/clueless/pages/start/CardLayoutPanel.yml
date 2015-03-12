@@ -1,0 +1,5 @@
+JPanel(name=cardLayoutPanel, background=white):
+      content:
+          - MainPanelButtonPanel(name=mainPanelButtonPanel)
+          - JoinGamePanel(name=joinGamePanel)
+          - CreateGamePanel(name=createGamePanel)

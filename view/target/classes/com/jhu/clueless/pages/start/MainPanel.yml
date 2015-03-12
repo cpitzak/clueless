@@ -1,0 +1,14 @@
+JPanel(name=mainPanel, background=white):
+      content:
+          - JLabel(name=cluelessLogoLabel)
+          - JLabel(name=welcomeLabel, text=label.welcome)
+          - JSeparator(name=sepMainSeperator)
+          - CardLayoutPanel(name=cards)
+          - MigLayout:
+                layoutConstraints: wrap
+                columnConstraints: [grow]
+                constraints:
+                     - cluelessLogoLabel: left
+                     - welcomeLabel: left
+                     - sepMainSeperator: grow
+                     - cards: grow, center
